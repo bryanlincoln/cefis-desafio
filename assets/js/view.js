@@ -8,7 +8,21 @@ var view = {
         console.log(courses)
         $("#courses").html("")
         for(courseIndex in courses) {
-            $("#courses").append("<h2>" + courses[courseIndex].title + "</h2>")
+            courses[courseIndex].banner
+            $("#courses").append('\
+                <div class="col-md-4">\
+                    <div class="card mb-4 box-shadow">\
+                        <div class="card-img-top" style="height:200px;background:url(' + courses[courseIndex].banner + ');background-size:cover"></div>\
+                        <div class="card-body">\
+                        <p class="card-text">' + courses[courseIndex].title + '</p>\
+                        <p class="text-secondary">' + courses[courseIndex].teachers_names + '</p>\
+                        <div class="d-flex justify-content-between align-items-center">\
+                            <a href="" class="btn btn-primary" role="button">VER CONTEÚDO</a>\
+                            <small class="text-muted">' + courses[courseIndex].category + '</small>\
+                        </div>\
+                        </div>\
+                    </div>\
+                    </div>')
         }
     },
 

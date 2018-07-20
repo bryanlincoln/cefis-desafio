@@ -1,3 +1,21 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
+
+header strong {
+    color: #ccc;
+    font-size:28px;
+    padding-left:10px;
+    border-left:2px solid #ccc;
+}
+header img {
+    padding-right:10px;
+}
+
+footer {
+    padding-top:15px;
+}
+
+.text-secondary {
+    font-size:14px;
+}
