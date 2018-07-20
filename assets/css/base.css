@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
 }
@@ -20,6 +29,10 @@ footer {
     box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
+iframe {
+    width:100%;
+}
+
 .text-secondary {
     font-size:14px;
 }
@@ -39,4 +52,22 @@ footer {
 #curso-header {
     color:#fff;
     text-shadow:0 0 20px #000;
+}
+
+.class {
+    cursor: pointer;
+}
+    .thumbnail {
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        width:90px;
+    }
+    .class-name {
+        padding-left: 80px;
+    }
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in; 
 }

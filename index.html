@@ -43,7 +43,7 @@
         <main role="main">
             <div class="album py-5 bg-light">
                 <div class="container">
-                    <div class="row" id="courses">
+                    <div class="row" id="cursos">
                     </div>
                 </div>
             </div>
@@ -66,6 +66,11 @@
         <script src="assets/js/bootstrap.min.js"></script>
         
         <script src="assets/js/controller.js"></script>
-        <script src="assets/js/view.js"></script>
+        <script src="assets/js/view_home.js"></script>
+        <script>
+            $(document).ready(function() {
+                controller.get_courses()
+            })
+        </script>
     </body>
 </html>

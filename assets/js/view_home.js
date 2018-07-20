@@ -6,18 +6,18 @@
 var view = {
     list_courses: function(courses) {
         console.log(courses)
-        $("#courses").html("")
+        $("#cursos").html("")
         for(courseIndex in courses) {
             courses[courseIndex].banner
-            $("#courses").append('\
-                <div class="col-md-4">\
+            $("#cursos").append('\
+                <div class="col-md-4 fade-in">\
                     <div class="card mb-4 box-shadow">\
                         <div class="card-img-top" style="height:200px;background:url(' + courses[courseIndex].banner + ');background-size:cover"></div>\
                         <div class="card-body">\
                         <p class="card-text">' + courses[courseIndex].title + '</p>\
                         <p class="text-secondary">' + courses[courseIndex].teachers_names + '</p>\
                         <div class="d-flex justify-content-between align-items-center">\
-                            <a href="" class="btn btn-primary" role="button">VER CONTEÚDO</a>\
+                            <a href="curso.html#' + courses[courseIndex].id + '" class="btn btn-primary" role="button">VER CONTEÚDO</a>\
                             <small class="text-muted">' + courses[courseIndex].category + '</small>\
                         </div>\
                         </div>\
@@ -27,10 +27,10 @@ var view = {
     },
 
     show_error: function(error) {
-        $("#courses").html("<h1>Ocorreu um erro.</h1><p>" + error + "</p>")
+        $("#cursos").html("<h1>Ocorreu um erro.</h1><p>" + error + "</p>")
     },
 
     show_loading: function() {
-        $("#courses").html("<img src='assets/images/loading.gif'/>")
+        $("#cursos").html("<img src='assets/images/loading.gif' style='height:100px'/>")
     }
 }
