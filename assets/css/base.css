@@ -16,6 +16,27 @@ footer {
     padding-top:15px;
 }
 
+.navbar {
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
 .text-secondary {
     font-size:14px;
+}
+
+#cover {
+    left:-5px;
+    right:-5px;
+    margin-top:-5px;
+    filter:blur(3px) brightness(0.5);
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+#curso-header {
+    color:#fff;
+    text-shadow:0 0 20px #000;
 }
