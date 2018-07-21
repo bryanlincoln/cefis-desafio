@@ -4,9 +4,6 @@
 
 var controller = {
     get_courses: function() {
-        // mostra a tela de loading para que o usuário espere
-        view.show_loading()
-
         // faz a requisição pra API
         // (poderia ser otimizado com um lazyload e uma rolagem infinita)
         $.ajax({
@@ -20,10 +17,8 @@ var controller = {
             }
         })
     },
-    get_course_details: function(courseID) {
-        // mostra a tela de loading para que o usuário espere
-        view.show_loading()
 
+    get_course_details: function(courseID) {
         // faz a requisição pra API
         // (poderia ser otimizado com um lazyload e uma rolagem infinita)
         $.ajax({

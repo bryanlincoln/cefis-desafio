@@ -5,7 +5,6 @@
 
 var view = {
     set_details: function(details) {
-        console.log(details)
         $("title").html(details.title + " - CEFIS")
         $("#nome-curso").html(details.title)
         $("#sub-curso").html(details.subtitle)
@@ -14,6 +13,7 @@ var view = {
         $("#descricao-curso").html(details.resume)
         $("#objetivo-curso").html(details.goal)
         $("#trailer").html(details.video_divulgacao)
+        $("#categoria-curso").html(details.category)
         
         $("#classes").html("")
         if(details.classes.length > 0) {
@@ -33,33 +33,4 @@ var view = {
             $("#class-count").html("Nenhuma disponível")
         }
     },
-
-    list_courses: function(courses) {
-        console.log(courses)
-        $("#courses").html("")
-        for(courseIndex in courses) {
-            $("#courses").append('\
-                <div class="col-md-4">\
-                    <div class="card mb-4 box-shadow">\
-                        <div class="card-img-top" style="height:200px;background:url(' + courses[courseIndex].banner + ');background-size:cover"></div>\
-                        <div class="card-body">\
-                        <p class="card-text">' + courses[courseIndex].title + '</p>\
-                        <p class="text-secondary">' + courses[courseIndex].teachers_names + '</p>\
-                        <div class="d-flex justify-content-between align-items-center">\
-                            <a href="" class="btn btn-primary" role="button">VER CONTEÚDO</a>\
-                            <small class="text-muted">' + courses[courseIndex].category + '</small>\
-                        </div>\
-                        </div>\
-                    </div>\
-                    </div>')
-        }
-    },
-
-    show_error: function(error) {
-        $("#courses").html("<h1>Ocorreu um erro.</h1><p>" + error + "</p>")
-    },
-
-    show_loading: function() {
-        $("#courses").html("<img src='assets/images/loading.gif'/>")
-    }
 }

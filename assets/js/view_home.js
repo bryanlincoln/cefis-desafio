@@ -5,7 +5,6 @@
 
 var view = {
     list_courses: function(courses) {
-        console.log(courses)
         $("#cursos").html("")
         for(courseIndex in courses) {
             courses[courseIndex].banner
@@ -28,9 +27,5 @@ var view = {
 
     show_error: function(error) {
         $("#cursos").html("<h1>Ocorreu um erro.</h1><p>" + error + "</p>")
-    },
-
-    show_loading: function() {
-        $("#cursos").html("<img src='assets/images/loading.gif' style='height:100px'/>")
     }
 }

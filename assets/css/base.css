@@ -13,13 +13,22 @@ body {
 
 header strong {
     color: #ccc;
-    font-size:28px;
+    font-size:30px;
     padding-left:10px;
     border-left:2px solid #ccc;
+    text-transform: uppercase;
 }
 header img {
     padding-right:10px;
 }
+    @media screen and (max-width: 768px) {
+        header strong {
+            font-size:20px;
+        }
+        header img {
+            width:100px;
+        }
+    }
 
 footer {
     padding-top:15px;
@@ -53,6 +62,17 @@ iframe {
     color:#fff;
     text-shadow:0 0 20px #000;
 }
+    @media screen and (max-width: 768px) {
+        #curso-header {
+            padding-top:30px !important;
+        }
+            #curso-header h2 {
+                font-size:25px;
+            }
+            #curso-header p {
+                font-size:20px;
+            }
+    }
 
 .class {
     cursor: pointer;
@@ -70,4 +90,8 @@ iframe {
 
 .fade-in {
     animation: fadeIn 0.3s ease-in; 
+}
+
+.loading {
+    height:100px;
 }
